@@ -340,3 +340,4 @@ function updateCarListings(page) {
 
 // Initial load
 updateCarListings(currentPage);
+

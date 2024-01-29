@@ -410,11 +410,15 @@ ol {
 
 .header__nav {
 	text-align: right;
-	padding: 32px 0 33px;
+	/* padding: 32px 0 33px; */
+	padding-left: 60px;
+	padding-right: 70px;
 }
 
 .header__logo {
-	padding: 35px 0;
+	/* padding: 35px 0; */
+	padding-left: 10px;
+	padding-top: 20px;
 	width: 200px;
 	height: auto;
 }

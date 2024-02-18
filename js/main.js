@@ -271,73 +271,137 @@ $('.vendor-carousel').owlCarousel({
 
 })(jQuery);
 
-//PAGINATION(changeable)
 
-var currentPage = 1;
 
-function changePage(page) {
-    // Update the active class for pagination
-    var paginationLinks = document.querySelectorAll('.pagination__option a');
-    paginationLinks.forEach(link => link.classList.remove('active'));
-    paginationLinks[page - 1].classList.add('active');
+    getVehiclesSelection();
+    async function getVehiclesSelection() {
+      try {
+        const response = await fetch("http://localhost:8000/api/vehicles/", {
+          method: 'GET',  // Change the method to GET
+          headers: {
+            Accept: "application/json",
+          },
+        });
+    
+        if (response.ok) {
+          const json = await response.json();
+          let carsContainer =  "";
+          let countArr = 0;
 
-    // Update the car listings for the selected page
-    updateCarListings(page);
-}
+     
+          const anchorElements = document.querySelectorAll('.car__item__text__inner a');
 
-function nextPage() {
-    if (currentPage < 3) { // Change this condition based on the number of pages
-        currentPage++;
-        changePage(currentPage);
-    }
-}
 
-function updateCarListings(page) {
-    // Clear existing car listings
-    document.getElementById('carListings').innerHTML = '';
+        const imageUrls = [
+            'http://127.0.0.1:5501/img/Car%20Listing/Mercedez-Benz%20Gullwing.png',
+            'http://127.0.0.1:5501/img/Car%20Listing/McLaren%20720S.png',
+            'http://127.0.0.1:5501/img/Car%20Listing/Aston%20Martin%20DB11.png',
+            'ihttp://127.0.0.1:5501/img/Car%20Listing/1930%20Bentley%20Speed%20Six.png',
+            'http://127.0.0.1:5501/img/Car%20Listing/1957%20Cadillac%20Eldorado%20Biarritz.png',
+            'http://127.0.0.1:5501/img/Car%20Listing/Audi%20Q8.png',
+            'http://127.0.0.1:5501/img/Car%20Listing/Ferrari%20488%20GTB.png',
+            'http://127.0.0.1:5501/img/Car%20Listing/Volkswagen%20Taigo.png',
+            'http://127.0.0.1:5501/img/Car%20Listing/BMW%20M8.png',
+            'http://127.0.0.1:5501/img/Car%20Listing/Audi%20A4.png',
+            'http://127.0.0.1:5501/img/Car%20Listing/Jaguar%20E-Type.png',
+            'http://127.0.0.1:5501/img/Car%20Listing/Bugatti%20Chiron.png',
+            'http://127.0.0.1:5501/img/Car%20Listing/Lexus%20LC.png',
+            'http://127.0.0.1:5501/img/Car%20Listing/Land%20Rover%20Range%20Rover.png',
+            'http://127.0.0.1:5501/img/Car%20Listing/Maserati%20Ghibli.png'
+        ];
 
-    // Add your car listings based on the selected page
-    var startIndex = (page - 1) * 4; // Assuming 4 cars per page
-    var endIndex = startIndex + 4;
+          json.forEach((element, index) => {
+          console.log(element.vehicle_id);
 
-    var carListings = [
-        { image: 'img/cars/Acura NSX.png', year: '2016', model: 'Acura NSX', mi: '35,000', transmission: 'Auto', hp: '700', option: 'For Rent', price: '$218/Month' },
-        { image: 'img/cars/Acura RLX.png', year: '2020', model: 'Acura RLX', mi: '35,000', transmission: 'Auto', hp: '700', option: 'For Sale', price: '$73,900' },
-        { image: 'img/cars/Alfa Romeo Giulia.png', year: '2017', model: 'Alfa Romeo Giulia', mi: '35,000', transmission: 'Auto', hp: '700', option: 'For Rent', price: '$299/Month' },
-        { image: 'img/cars/Alfa Romeo Stelvio Quadrifoglio.png', year: '2018', model: 'Alfa Romeo Stelvio Quadrifoglio', mi: '35,000', transmission: 'Auto', hp: '700', option: 'For Rent', price: '$319/Month' },
-        // Add more car listings here
-    ];
+          // Retrieve the HTML link directly from the DOM
+            const htmlLink = document.getElementById(`carBrandModel_${countArr}`);
+            // const hrefValue = htmlLink ? htmlLink.href : '';
+            const anchorElement = anchorElements[index];
+           const hrefValue = anchorElement ? anchorElement.href : '';
 
-    for (var i = startIndex; i < endIndex && i < carListings.length; i++) {
-        var car = carListings[i];
-        var carHtml = `
-            <div class="col-lg-4 col-md-4">
-                <div class="car__item">
-                    <div class="car__item__pic__slider owl-carousel">
-                        <img src="${car.image}" alt="">
-                    </div>
-                    <div class="car__item__text">
-                        <div class="car__item__text__inner">
-                            <div class="label-date">${car.year}</div>
-                            <h5><a href="./car-details.html">${car.model}</a></h5>
-                            <ul>
-                                <li><span>${car.mi}</span> mi</li>
-                                <li>${car.transmission}</li>
-                                <li><span>${car.hp}</span> hp</li>
-                            </ul>
-                        </div>
-                        <div class="car__item__price">
-                            <span class="car-option">${car.option}</span>
-                            <h6>${car.price}</h6>
-                        </div>
-                    </div>
+
+           // Check if a new row should be started (every 3rd iteration)
+           if (index % 3 === 0) {
+            carsContainer += '<div class="row">';
+        }
+
+          // Append each car's HTML to the carsContainer
+    
+        carsContainer += `
+        <div class="col-lg-4 col-md-4 mt-5">
+        <div class="car__item">
+            <div class="car__item__pic__slider owl-carousel">
+            <img src="${imageUrls[countArr]}" alt="Car Image">
+            </div>
+            <div class="car__item__text">
+                <div class="car__item__text__inner">
+                    <div id="vin_number">${element.VIN}</div>
+                    <h5><a href="${hrefValue}" id="carBrandModel_${countArr}">${element.brand_name} 
+                        <span id="carModel_${countArr}">${element.model_name}</span></a></h5>
+                    <ul>
+                        <li><span id="carPrice"> ${element.price}</span></li>
+                        <li><span id="carBodyStyle">${element.body_style}</span></li>
+                    </ul>
                 </div>
             </div>
-        `;
-        document.getElementById('carListings').innerHTML += carHtml;
+        </div>
+    </div>`;
+
+
+
+     
+
+        // Check if the current iteration completes a row
+                if ((index + 1) % 3 === 0 || index === json.length - 1) {
+                    carsContainer += '</div>';
+                }
+          countArr++;
+    
+          
+
+
+          });
+          
+
+          document.getElementById("cars_container").innerHTML = carsContainer;
+
+          // Assuming you want to update the first car's details (index 0)
+          const firstCarData = json[0];
+    
+          // Update vin_number
+          document.getElementById("vin_number").textContent = firstCarData.vin_number;
+    
+          // Update carBrandModel
+          const carBrandModelElement = document.getElementById("carBrandModel");
+          carBrandModelElement.innerHTML = `${firstCarData.brand_name} <span id="carModel">${firstCarData.model}</span>`;
+    
+          // Update carPrice
+          document.getElementById("carPrice").textContent = `price | $${price[firstCarData.vehicle_id]}`;
+    
+          // Update carBodyStyle
+          document.getElementById("carBodyStyle").textContent = firstCarData.body_style;
+    
+        } else {
+          console.error("Failed to fetch vehicles for selection. Status:", response.status);
+        }
+      } catch (error) {
+        console.error("An error occurred while fetching vehicles for selection", error);
+        }
+      }
+    
+     // Function to get and update data
+     function getVehicleData() {
+      // Get the element by its ID
+      var dataContainer = document.getElementById("dataContainer");
     }
-}
-
-// Initial load
-updateCarListings(currentPage);
-
+    
+    // Function to reset filters
+    function resetFilters() {
+        // Reset all select elements to their default values
+        document.querySelectorAll('.filter-options-section select').forEach(select => {
+          select.value = '';
+        });
+      
+        // Trigger the form submission to fetch all vehicles without filters
+        document.querySelector('.form-inline').dispatchEvent(new Event('submit'));
+      }

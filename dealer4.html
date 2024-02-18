@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="HVAC Template">
+    <meta name="keywords" content="HVAC, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HVAC | Template</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="offcanvas__widget">
+            <a href="#"><i class="fa fa-cart-plus"></i></a>
+            <a href="#" class="search-switch"><i class="fa fa-search"></i></a>
+            <a href="#" class="primary-btn">Add Car</a>
+        </div>
+        <nav class="offcanvas__menu mobile-menu">
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+    </div>
+    <!-- Offcanvas Menu End -->
+
+  <!-- Header Section Begin -->
+  <header>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2">
+                <div class="header__logo">
+                    <a href="./index.html"><img src="img/logofinal.png" alt=""></a>
+                </div>
+            </div>
+            <div class="col-lg-10">
+                <div class="header__nav">
+                    <nav class="header__menu">
+                        <ul>
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./car.html">Car</a></li> 
+                            <li><a href="./dealers.html">Dealers</a></li>
+                            <li><a href="./contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header__nav__widget">
+                        <div class="header__nav__widget__btn">
+                            <a href="#"><i class="fa fa-cart-plus"></i></a>
+                            <a href="#" class="search-switch"><i class="fa fa-search"></i></a>
+                        </div>
+                    <form action="login.php" method="post">
+                        <input type="submit" class="primary-btn" value="Login">
+                    </form>                        
+                </div>
+            </div>
+        </div>
+        <div class="canvas__open">
+            <span class="fa fa-bars"></span>
+        </div>
+    </div>
+</header>
+<!-- Header Section End -->
+
+    <!-- Breadcrumb End -->
+    <div class="breadcrumb-option set-bg" data-setbg="img/breadcrumb-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb__text">
+                        <h2>Inventories</h2>
+                        <div class="breadcrumb__links">
+                            <a href="./index.html"><i class="fa fa-home"></i> Home</a>
+                            <a href="./dealers.html"><i class=""></i> Dealers</a>
+                            <span>Inventories</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb Begin -->
+
+    <!-- Dealer's Profile Container -->
+    <div class="profile-container">
+        <div class="container-title">Dealer's Profile</div>
+        <img src="img/dealers/dealer-1.jpg" alt="Dealer" class="dealer-picture" />
+        <div class="profile-info">
+          <h2>MASON SINCLAIR</h2>
+          <p>Dealer ID:  DlrID_5rU9vX3bW2z</p>
+          <p>Email: mason.sinclair@email.com</p>
+          <p>Phone: +1 456-789-0123</p>
+          <p>Location: 789 Pine Street, Villagetown, State</p>
+        </div>
+      </div>
+  
+  <!-- Filter Section Begin-->  
+  <section class="car spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="car__sidebar">
+                    <div class="car__search">
+                        <h5>Car Search</h5>
+                        <form action="#">
+                            <input type="text" placeholder="Search...">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div>
+                    <div id="searchResults"></div>
+                    <div class="car__filter">
+                        <h5>Car Filter</h5>
+                        <form action="#">
+                            <select>
+                                <option data-display="Brand">Select Brand</option>
+                                <option value="">Acura</option>
+                                <option value="">Audi</option>
+                                <option value="">Bentley</option>
+                                <option value="">BMW</option>
+                                <option value="">Bugatti</option>
+                            </select>
+                            <select>
+                                <option data-display="Model">Select Model</option>
+                                <option value="">Q3</option>
+                                <option value="">A4 </option>
+                                <option value="">AVENTADOR</option>
+                            </select>
+                            <select>
+                                <option value="">Body Style</option>
+                                <option value="">Option 1</option>
+                                <option value="">Option 2</option>
+                            </select>
+                            <select>
+                                <option value="">Transmisson</option>
+                                <option value="">Bluetooth</option>
+                                <option value="">WiFi</option>
+                            </select>
+                            <select>
+                                <option value="">Engine</option>
+                                <option value="">BS3</option>
+                                <option value="">BS4</option>
+                                <option value="">BS5</option>
+                                <option value="">BS6</option>
+                            </select>
+                            <select>
+                                <option value="">Colors</option>
+                                <option value="">Red</option>
+                                <option value="">Blue</option>
+                                <option value="">Black</option>
+                                <option value="">Yellow</option>
+                            </select>
+                            <div class="filter-price">
+                                <p>Price:</p>
+                                <div class="price-range-wrap">
+                                    <div class="filter-price-range"></div>
+                                    <div class="range-slider">
+                                        <div class="price-input">
+                                            <input type="text" id="filterAmount">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="car__filter__btn">
+                                <button type="submit" class="site-btn">Reset Filter</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div class="car__filter__option">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                         
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="car__filter__option__item car__filter__option__item--right">
+                                <h6>Sort By</h6>
+                                <select>
+                                    <option value=""> Highest Price</option>
+                                    <option value=""> Lowest Price</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    <!-- Filter End-->
+  
+  
+    <!-- Sale Section Begin -->
+    <div class="inventory-container">
+        <div class="container-title">Sales Inventory</div>           
+        <div class="car-item">
+              <img src="img/Car Listing/BMW M8.png" alt="Car 2" class="car-image" />
+                  <div class="car-details">
+                      <h3>Brand: BMW</h3>
+                      <p>Model: M8</p>
+                      <p>Color: Black Sapphire</p>
+                      <p>Engine: V8</p>
+                      <p>Transmission: Automatic</p>
+                      <p>Price: $ 140,795</p>
+                      <p>Quantity: 1</p>
+                      <p>Date of Sale: December 25, 2023</p>
+                  </div>
+        </div>
+        </div>
+        </div>
+      </section>
+        
+        <style>
+          body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+          }
+    
+          .profile-container,
+          .inventory-container {
+            position: relative; /* Added for positioning */
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+          }
+    
+          .container-title {
+            background-color: green;
+            color: #fff;
+            font-size: 24px;
+            padding: 10px;
+            text-align: center;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+          }
+    
+          .profile-container .container-title {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+          }
+    
+          .profile-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #f2f2f2;
+          }
+    
+          .dealer-picture {
+            max-width: 30%;
+            max-height: 30%;
+            margin-right: 50px;
+            padding-top: 60px;
+            padding-left: 50px;
+            padding-right: 50px;
+          }
+    
+          .profile-info {
+            flex: 1;
+            font-size: 26px;
+          }
+  
+          h2 {
+          margin-bottom: 30px; /* Adjust the value as needed */
+          font-weight: bold;
+          }
+  
+          p {
+              color: #333;
+              font-size: 20px;
+          }
+    
+          .inventory-container {
+            padding: 20px;
+          }
+    
+          .car-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            margin-top: 20px;
+          }
+    
+          .car-image {
+            max-width: 40%;
+            margin-right: 50px;
+            border-radius: 5px;
+          }
+    
+          .car-details {
+            flex: 1;
+            font-size: 26px;
+          }
+  
+          h3 {
+            margin-bottom: 30px; /* Adjust the value as needed */
+            font-weight: bold;
+          }
+        </style>
+
+     <!-- Footer Section Begin -->
+     <footer class="footer set-bg" data-setbg="img/footer-bg.jpg">
+        <div class="container">
+          <div class="footer__contact">
+            <div class="row">
+              <div class="col-lg-6 col-md-6">
+                <div class="footer__contact__title">
+                  <h2>Contact Us Now!</h2>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6">
+                <div class="footer__contact__option">
+                  <div class="option__item">
+                    <i class="fa fa-phone"></i> (+63) 912 345 8888
+                  </div>
+                  <div class="option__item email">
+                    <i class="fa fa-envelope-o"></i> autohub@gmail.com
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4 col-md-4">
+              <div class="footer__about">
+                <div class="footer__logo">
+                  <a href="#"><img src="img/logo-footer.png" alt="" /></a>
+                </div>
+                <p>
+                  Any questions? Let us know in store at 
+                  92G C. Raymundo Ave, Pasig, Metro Manila or call us on (+63) 912 345 8888
+                </p>
+                <div class="footer__social">
+                  <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                  <a href="#" class="google"><i class="fa fa-google"></i></a>
+                  <a href="#" class="skype"><i class="fa fa-skype"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-2 offset-lg-1 col-md-3">
+              <div class="footer__widget">
+                <h5>Infomation</h5>
+                <ul>
+                  <li>
+                    <a href="#"><i class="fa fa-angle-right"></i> Purchase</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-angle-right"></i> Payment</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-angle-right"></i> Shipping</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-angle-right"></i> Return</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-3">
+              <div class="footer__widget">
+                <h5>Infomation</h5>
+                <ul>
+                  <li>
+                    <a href="#"><i class="fa fa-angle-right"></i> Coupe</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-angle-right"></i> Cabrio</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-angle-right"></i> SUV</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-angle-right"></i> Sedan</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-angle-right"></i> Roadster</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="footer__brand">
+                <h5>Top Brand</h5>
+                <ul>
+                  <li>
+                    <a href="#"><i class="fa fa-angle-right"></i> Ford</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-angle-right"></i> Mitsubishi</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-angle-right"></i> Suzuki</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-angle-right"></i> Nissan</a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                    <a href="#"><i class="fa fa-angle-right"></i> Honda</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-angle-right"></i> Kia</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-angle-right"></i> Chevrolet</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-angle-right"></i> Hyundai</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          <div class="footer__copyright__text">
+            <p>
+              Copyright &copy;
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              All rights reserved | This template is made with
+              <i class="fa fa-heart" aria-hidden="true"></i> by
+              <a href="https://colorlib.com" target="_blank">Colorlib</a>
+            </p>
+          </div>
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        </div>
+      </footer>
+      <!-- Footer Section End -->
+      
+
+    <!-- Search Begin -->
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch">+</div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Search here.....">
+            </form>
+        </div>
+    </div>
+    <!-- Search End -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

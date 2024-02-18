@@ -59,15 +59,7 @@
                             <ul>
                                 <li><a href="./index.html">Home</a></li>
                                 <li><a href="./car.html">Car</a></li> 
-                                <li><a href="./blog.html">Blog</a></li>
                                 <li><a href="./dealers.html">Dealers</a></li>
-                                <!-- <li><a href="#">Pages</a>
-                                    <ul class="dropdown">
-                                        <li><a href="./car-details.html">Car Details</a></li>
-                                        <li><a href="./blog-details.html">Blog Details</a></li>
-                                    </ul>
-                                </li> -->
-                                <li><a href="./about.html">About</a></li>
                                 <li><a href="./contact.html">Contact</a></li>
                             </ul>
                         </nav>
@@ -126,55 +118,20 @@
                         <div class="car__filter">
                             <h5>Car Filter</h5>
                             <form action="#">
-                                <select>
+                                <select id="brands" class="select-brand">
                                     <option data-display="Brand">Select Brand</option>
-                                    <option value="">Acura</option>
-                                    <option value="">Audi</option>
-                                    <option value="">Bentley</option>
-                                    <option value="">BMW</option>
-                                    <option value="">Bugatti</option>
                                 </select>
-                                <select>
+                                <select id="models" class="select-model">
                                     <option data-display="Model">Select Model</option>
-                                    <option value="">Q3</option>
-                                    <option value="">A4 </option>
-                                    <option value="">AVENTADOR</option>
                                 </select>
-                                <select>
+                                <select id="body_style" class="select-body-style">
                                     <option value="">Body Style</option>
-                                    <option value="">Option 1</option>
-                                    <option value="">Option 2</option>
                                 </select>
-                                <!-- <select>
-                                    <option value="">Condition</option>
-                                    <option value="">First Hand</option>
-                                    <option value="">Second Hand</option>
-                                </select> -->
-                                <select>
-                                    <option value="">Transmisson</option>
-                                    <option value="">Bluetooth</option>
-                                    <option value="">WiFi</option>
+                                <select id="transmission" class="select-transmission">
+                                    <option value="">Transmission</option>
                                 </select>
-                                <!-- <select>
-                                    <option value="">Mileage</option>
-                                    <option value="">27</option>
-                                    <option value="">20</option>
-                                    <option value="">15</option>
-                                    <option value="">10</option>
-                                </select> -->
-                                <select>
+                                <select id="engine" class="select-engine">
                                     <option value="">Engine</option>
-                                    <option value="">BS3</option>
-                                    <option value="">BS4</option>
-                                    <option value="">BS5</option>
-                                    <option value="">BS6</option>
-                                </select>
-                                <select>
-                                    <option value="">Colors</option>
-                                    <option value="">Red</option>
-                                    <option value="">Blue</option>
-                                    <option value="">Black</option>
-                                    <option value="">Yellow</option>
                                 </select>
                                 <div class="filter-price">
                                     <p>Price:</p>
@@ -198,7 +155,6 @@
                     <div class="car__filter__option">
                         <div class="row">
                             <div class="col-lg-6 col-md-6">
-                             
                             </div>
                             <div class="col-lg-6 col-md-6">
                                 <div class="car__filter__option__item car__filter__option__item--right">
@@ -211,408 +167,296 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                     
-                        <div class="col-lg-4 col-md-4">
-                            <div class="car__item">
-                                <div class="car__item__pic__slider owl-carousel">
-                                    <img src="img/Cars img/Mercedes-Benz 300SL Gullwing.png" alt="">
-                                    <!-- <img src="img/cars/car-8.jpg" alt="">
-                                    <img src="img/cars/car-6.jpg" alt="">
-                                    <img src="img/cars/car-5.jpg" alt=""> -->
-                                </div>
-                                <div class="car__item__text">
-                                    <div class="car__item__text__inner">
-                                        <div class="label-date">1955</div>
-                                        <h5><a href="./car-details-mercedez-benz-gullwing.html">1955 Mercedes-Benz 300SL Gullwing</a></h5>
-                                        <ul>
-                                            <li><span>$</span>1.4M</li>
-                                            <li>Mercedes-Benz</li>
-                                            <li><span>Coupe</span></li>
-                                        </ul>
+                    <div id="cars_container">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4">                         
+                                <div class="col-lg-4 col-md-4">
+                                    <div class="car__item">
+                                        <div class="car__item__pic__slider owl-carousel">
+                                            <img src="img/Car Listing/Mercedez-Benz Gullwing.png" alt="">
+                                        </div>
+                                        <div class="car__item__text">
+                                            <div class="car__item__text__inner">
+                                                <div id="vin_number"></div>
+                                                <h5><a href="./car-details-mercedez-benz.html" id="carBrandModel"> <span id="carModel"></span></a></h5>
+                                                <ul>
+                                                    <li><span id="carPrice"></span></li>
+                                                    <li><span id="carBodyStyle"></span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <!-- <div class="car__item__price">
-                                        <span class="car-option">For Rent</span>
-                                        <h6>$299<span>/Month</span></h6>
-                                    </div> -->
                                 </div>
-                            </div>
-                        </div>
-                       
-                        <div class="col-lg-4 col-md-4">
-                            <div class="car__item">
-                                <div class="car__item__pic__slider owl-carousel">
-                                    <img src="img/Cars img/McLaren 720S.png" alt="">
-                                    <!-- <img src="img/cars/car-8.jpg" alt="">
-                                    <img src="img/cars/car-3.jpg" alt="">
-                                    <img src="img/cars/car-1.jpg" alt=""> -->
-                                </div>
-                                <div class="car__item__text">
-                                    <div class="car__item__text__inner">
-                                        <div class="label-date">2017</div>
-                                        <h5><a href="./car-details-mclaren-720s.html">McLaren 720S</a></h5>
-                                        <ul>
-                                            <li><span>$</span> 203,444</li>
-                                            <li>McLaren</li>
-                                            <li><span>Coupe</span></li>
-                                        </ul>
+
+
+                                <div class="col-lg-4 col-md-4">
+                                    <div class="car__item">
+                                        <div class="car__item__pic__slider owl-carousel">
+                                            <img src="img/Car Listing/McLaren 720S.png" alt="">
+                                        </div>
+                                        <div class="car__item__text">
+                                            <div class="car__item__text__inner">
+                                                <div id="vin_number"></div>
+                                                <h5><a href="./car-details-mclaren-720s.html" id="carBrandModel"> <span id="carModel"></span></a></h5>
+                                                <ul>
+                                                    <li><span id="carPrice"></span></li>
+                                                    <li><span id="carBodyStyle"></span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <!-- <div class="car__item__price">
-                                        <span class="car-option sale">For Sale</span>
-                                        <h6>$730,900</h6>
-                                    </div> -->
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4">
-                            <div class="car__item">
-                                <div class="car__item__pic__slider owl-carousel">
-                                    <img src="img/Cars img/Aston Martin DB11.png" alt="">
-                                    <!-- <img src="img/cars/car-8.jpg" alt="">
-                                    <img src="img/cars/car-2.jpg" alt="">
-                                    <img src="img/cars/car-1.jpg" alt=""> -->
-                                </div>
-                                <div class="car__item__text">
-                                    <div class="car__item__text__inner">
-                                        <div class="label-date">2016</div>
-                                        <h5><a href="./car-details-aston-martin.html">Aston Martin DB11</a></h5>
-                                        <ul>
-                                            <li><span>$</span> 220,086</li>
-                                            <li>Aston Martin</li>
-                                            <li><span>Coupe</span></li>
-                                        </ul>
+
+
+                                <div class="col-lg-4 col-md-4">
+                                    <div class="car__item">
+                                        <div class="car__item__pic__slider owl-carousel">
+                                            <img src="img/Car Listing/Aston Martin DB11.png" alt="">
+                                        </div>
+                                        <div class="car__item__text">
+                                            <div class="car__item__text__inner">
+                                                <div id="vin_number"></div>
+                                                <h5><a href="./car-details-aston-martin.html" id="carBrandModel"> <span id="carModel"></span></a></h5>
+                                                <ul>
+                                                    <li><span id="carPrice"></span></li>
+                                                    <li><span id="carBodyStyle"></span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <!-- <div class="car__item__price">
-                                        <span class="car-option">For Rent</span>
-                                        <h6>$319<span>/Month</span></h6>
-                                    </div> -->
-                                </div>
-                            </div>
-                        </div>
-                 
-               
-                        <div class="col-lg-4 col-md-4">
-                            <div class="car__item">
-                                <div class="car__item__pic__slider owl-carousel">
-                                    <img src="img/Cars img/1930 Bentley Speed Six.png" alt="">
-                                    <!-- <img src="img/cars/car-3.jpg" alt="">
-                                    <img src="img/cars/car-5.jpg" alt="">
-                                    <img src="img/cars/car-2.jpg" alt=""> -->
-                                </div>
-                                <div class="car__item__text">
-                                    <div class="car__item__text__inner">
-                                        <div class="label-date">1930</div>
-                                        <h5><a href="./car-details-bentley-speed-six.html">1930 Bentley Speed Six</a></h5>
-                                        <ul>
-                                            <li><span>$</span> 1,134,968</li>
-                                            <li>Bentley</li>
-                                            <li><span>Roadster</span></li>
-                                        </ul>
+                                </div>            
+
+
+                                <div class="col-lg-4 col-md-4">
+                                    <div class="car__item">
+                                        <div class="car__item__pic__slider owl-carousel">
+                                            <img src="img/Car Listing/1930 Bentley Speed Six.png" alt="">
+                                        </div>
+                                        <div class="car__item__text">
+                                            <div class="car__item__text__inner">
+                                                <div id="vin_number"></div>
+                                                <h5><a href="./car-details-bentley-speed-six.html" id="carBrandModel"> <span id="carModel"></span></a></h5>
+                                                <ul>
+                                                    <li><span id="carPrice"></span></li>
+                                                    <li><span id="carBodyStyle"></span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <!-- <div class="car__item__price">
-                                        <span class="car-option sale">For sale</span>
-                                        <h6>$73,900</h6>
-                                    </div> -->
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4">
-                            <div class="car__item">
-                                <div class="car__item__pic__slider owl-carousel">
-                                    <img src="img/Cars img/1957 Cadillac Eldorado Biarritz.png" alt="">
-                                    <!-- <img src="img/cars/car-3.jpg" alt="">
-                                    <img src="img/cars/car-5.jpg" alt="">
-                                    <img src="img/cars/car-2.jpg" alt=""> -->
-                                </div>
-                                <div class="car__item__text">
-                                    <div class="car__item__text__inner">
-                                        <div class="label-date">1957</div>
-                                        <h5><a href="./car-details-cadillac.html">1957 Cadillac Eldorado Biarritz</a></h5>
-                                        <ul>
-                                            <li><span>$</span> 13,074</li>
-                                            <li>Cadillac</li>
-                                            <li><span>Cabrio</span></li>
-                                        </ul>
+
+
+                                <div class="col-lg-4 col-md-4">
+                                    <div class="car__item">
+                                        <div class="car__item__pic__slider owl-carousel">
+                                            <img src="img/Car Listing/1957 Cadillac Eldorado Biarritz.png" alt="">
+                                        </div>
+                                        <div class="car__item__text">
+                                            <div class="car__item__text__inner">
+                                                <div id="vin_number"></div>
+                                                <h5><a href="./car-details-cadillac.html" id="carBrandModel"> <span id="carModel"></span></a></h5>
+                                                <ul>
+                                                    <li><span id="carPrice"></span></li>
+                                                    <li><span id="carBodyStyle"></span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <!-- <div class="car__item__price">
-                                        <span class="car-option sale">For sale</span>
-                                        <h6>$73,900</h6>
-                                    </div> -->
                                 </div>
-                            </div>
-                        </div>
-                      
-                        <div class="col-lg-4 col-md-4">
-                            <div class="car__item">
-                                <div class="car__item__pic__slider owl-carousel">
-                                    <img src="img/Cars img/Rolls-Royce Phantom.png" alt="">
-                                    <!-- <img src="img/cars/car-3.jpg" alt="">
-                                    <img src="img/cars/car-5.jpg" alt="">
-                                    <img src="img/cars/car-2.jpg" alt=""> -->
-                                </div>
-                                <div class="car__item__text">
-                                    <div class="car__item__text__inner">
-                                        <div class="label-date">1925</div>
-                                        <h5><a href="./car-details-rolls-royce-phantom.html">1925 Rolls-Royce Phantom</a></h5>
-                                        <ul>
-                                            <li><span>$</span> 258,643</li>
-                                            <li>Rolls-Royce</li>
-                                            <li><span>Sedan</span></li>
-                                        </ul>
+
+
+                                <div class="col-lg-4 col-md-4">
+                                    <div class="car__item">
+                                        <div class="car__item__pic__slider owl-carousel">
+                                            <img src="img/Car Listing/Audi Q8.png" alt="">
+                                        </div>
+                                        <div class="car__item__text">
+                                            <div class="car__item__text__inner">
+                                                <div id="vin_number"></div>
+                                                <h5><a href="./car-details-audi-q8.html" id="carBrandModel"> <span id="carModel"></span></a></h5>
+                                                <ul>
+                                                    <li><span id="carPrice"></span></li>
+                                                    <li><span id="carBodyStyle"></span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <!-- <div class="car__item__price">
-                                        <span class="car-option sale">For sale</span>
-                                        <h6>$73,900</h6>
-                                    </div> -->
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4">
-                            <div class="car__item">
-                                <div class="car__item__pic__slider owl-carousel">
-                                    <img src="img/Cars img/Ferrari 488 GTB.png" alt="">
-                                    <!-- <img src="img/cars/car-3.jpg" alt="">
-                                    <img src="img/cars/car-5.jpg" alt="">
-                                    <img src="img/cars/car-2.jpg" alt=""> -->
-                                </div>
-                                <div class="car__item__text">
-                                    <div class="car__item__text__inner">
-                                        <div class="label-date">2015</div>
-                                        <h5><a href="./car-details-ferrari-488.html">Ferrari 488 GTB</a></h5>
-                                        <ul>
-                                            <li><span>$</span> 262,647</li>
-                                            <li>Ferrari</li>
-                                            <li><span>Coupe</span></li>
-                                        </ul>
+                                
+                                <div class="col-lg-4 col-md-4">
+                                    <div class="car__item">
+                                        <div class="car__item__pic__slider owl-carousel">
+                                            <img src="img/Car Listing/Ferrari 488 GTB.png" alt="">
+                                        </div>
+                                        <div class="car__item__text">
+                                            <div class="car__item__text__inner">
+                                                <div id="vin_number"></div>
+                                                <h5><a href="./car-details-ferrari-488.html" id="carBrandModel"> <span id="carModel"></span></a></h5>
+                                                <ul>
+                                                    <li><span id="carPrice"></span></li>
+                                                    <li><span id="carBodyStyle"></span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <!-- <div class="car__item__price">
-                                        <span class="car-option sale">For sale</span>
-                                        <h6>$73,900</h6>
-                                    </div> -->
                                 </div>
-                            </div>
-                        </div>
-                   
-                        <div class="col-lg-4 col-md-4">
-                            <div class="car__item">
-                                <div class="car__item__pic__slider owl-carousel">
-                                    <img src="img/Car Listing/Volkswagen Taigo.png" alt="">
-                                    <!-- <img src="img/cars/car-3.jpg" alt="">
-                                    <img src="img/cars/car-5.jpg" alt="">
-                                    <img src="img/cars/car-2.jpg" alt=""> -->
-                                </div>
-                                <div class="car__item__text">
-                                    <div class="car__item__text__inner">
-                                        <div class="label-date">2020</div>
-                                        <h5><a href="./car-details-volkswagen-taigo.html">Volkswagen Taigo</a></h5>
-                                        <ul>
-                                            <li><span>$</span> 52,000</li>
-                                            <li>Volkswagen</li>
-                                            <li><span>SUV</span></li>
-                                        </ul>
+                        
+                                <div class="col-lg-4 col-md-4 car__item">
+                                    <div class="car__item__pic__slider owl-carousel">
+                                        <img src="img/Car Listing/Volkswagen Taigo.png" alt="">
                                     </div>
-                                    <!-- <div class="car__item__price">
-                                        <span class="car-option sale">For sale</span>
-                                        <h6>$73,900</h6>
-                                    </div> -->
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="col-lg-4 col-md-4">
-                            <div class="car__item">
-                                <div class="car__item__pic__slider owl-carousel">
-                                    <img src="img/Car Listing/BMW M8.png" alt="">
-                                    <!-- <img src="img/cars/car-3.jpg" alt="">
-                                    <img src="img/cars/car-5.jpg" alt="">
-                                    <img src="img/cars/car-2.jpg" alt=""> -->
-                                </div>
-                                <div class="car__item__text">
-                                    <div class="car__item__text__inner">
-                                        <div class="label-date">2019</div>
-                                        <h5><a href="./car-details-bmw-m8.html">BMW M8</a></h5>
-                                        <ul>
-                                            <li><span>$</span> 34,000</li>
-                                            <li>BMW</li>
-                                            <li><span>Cabrio</span></li>
-                                        </ul>
+                                    <div class="car__item__text">
+                                        <div class="car__item__text__inner">
+                                            <div id="vin_number"></div>
+                                            <h5><a href="./car-details-volkswagen-taigo.html" id="carBrandModel"> <span id="carModel"></span></a></h5>
+                                            <ul>
+                                                <li><span id="carPrice"></span></li>
+                                                <li><span id="carBodyStyle"></span></li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <!-- <div class="car__item__price">
-                                        <span class="car-option sale">For sale</span>
-                                        <h6>$73,900</h6>
-                                    </div> -->
                                 </div>
-                            </div>
-                        </div>
-                       
-                        <div class="col-lg-4 col-md-4">
-                            <div class="car__item">
-                                <div class="car__item__pic__slider owl-carousel">
-                                    <img src="img/Car Listing/Audi A4.png" alt="">
-                                    <!-- <img src="img/cars/car-3.jpg" alt="">
-                                    <img src="img/cars/car-5.jpg" alt="">
-                                    <img src="img/cars/car-2.jpg" alt=""> -->
-                                </div>
-                                <div class="car__item__text">
-                                    <div class="car__item__text__inner">
-                                        <div class="label-date">2023</div>
-                                        <h5><a href="./car-details-audi-a4.html">Audi A4</a></h5>
-                                        <ul>
-                                            <li><span>$</span> 41,000</li>
-                                            <li>Audi</li>
-                                            <li><span>Sedan</span></li>
-                                        </ul>
+                        
+                                <div class="col-lg-4 col-md-4">
+                                    <div class="car__item">
+                                        <div class="car__item__pic__slider owl-carousel">
+                                            <img src="img/Car Listing/BMW M8.png" alt="">
+                                        </div>
+                                        <div class="car__item__text">
+                                            <div class="car__item__text__inner">
+                                                <div id="vin_number"></div>
+                                                <h5><a href="./car-details-bmw-m8.html" id="carBrandModel"> <span id="carModel"></span></a></h5>
+                                                <ul>
+                                                    <li><span id="carPrice"></span></li>
+                                                    <li><span id="carBodyStyle"></span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <!-- <div class="car__item__price">
-                                        <span class="car-option sale">For sale</span>
-                                        <h6>$73,900</h6>
-                                    </div> -->
                                 </div>
-                            </div>
-                        </div>
-                      
-                        <div class="col-lg-4 col-md-4">
-                            <div class="car__item">
-                                <div class="car__item__pic__slider owl-carousel">
-                                    <img src="img/Cars img/Jaguar E-Type.png" alt="">
-                                    <!-- <img src="img/cars/car-3.jpg" alt="">
-                                    <img src="img/cars/car-5.jpg" alt="">
-                                    <img src="img/cars/car-2.jpg" alt=""> -->
-                                </div>
-                                <div class="car__item__text">
-                                    <div class="car__item__text__inner">
-                                        <div class="label-date">1961</div>
-                                        <h5><a href="./car-details-jaguar.html">Jaguar E-Type</a></h5>
-                                        <ul>
-                                            <li><span>$</span> 437,000</li>
-                                            <li>Jaguar</li>
-                                            <li><span>Cabrio</span></li>
-                                        </ul>
+        
+                            
+                                <div class="col-lg-4 col-md-4">
+                                    <div class="car__item">
+                                        <div class="car__item__pic__slider owl-carousel">
+                                            <img src="img/Car Listing/Audi A4.png" alt="">
+                                        </div>
+                                        <div class="car__item__text">
+                                            <div class="car__item__text__inner">
+                                                <div id="vin_number"></div>
+                                                <h5><a href="./car-details-audi-a4.html" id="carBrandModel"> <span id="carModel"></span></a></h5>
+                                                <ul>
+                                                    <li><span id="carPrice"></span></li>
+                                                    <li><span id="carBodyStyle"></span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <!-- <div class="car__item__price">
-                                        <span class="car-option sale">For sale</span>
-                                        <h6>$73,900</h6>
-                                    </div> -->
                                 </div>
-                            </div>
-                        </div>
-                 
-                        <div class="col-lg-4 col-md-4">
-                            <div class="car__item">
-                                <div class="car__item__pic__slider owl-carousel">
-                                    <img src="img/Cars img/Bugatti Chiron.png" alt="">
-                                    <!-- <img src="img/cars/car-3.jpg" alt="">
-                                    <img src="img/cars/car-5.jpg" alt="">
-                                    <img src="img/cars/car-2.jpg" alt=""> -->
-                                </div>
-                                <div class="car__item__text">
-                                    <div class="car__item__text__inner">
-                                        <div class="label-date">2016</div>
-                                        <h5><a href="./car-details-bugatti-chiron.html">Bugatti Chiron</a></h5>
-                                        <ul>
-                                            <li><span>$</span> 2.9M</li>
-                                            <li>Bugatti</li>
-                                            <li><span>Coupe</span></li>
-                                        </ul>
+                                
+                            
+                                <div class="col-lg-4 col-md-4">
+                                    <div class="car__item">
+                                        <div class="car__item__pic__slider owl-carousel">
+                                            <img src="img/Car Listing/Jaguar E-Type.png" alt="">
+                                        </div>
+                                        <div class="car__item__text">
+                                            <div class="car__item__text__inner">
+                                                <div id="vin_number"></div>
+                                                <h5><a href="./car-details-jaguar.html" id="carBrandModel"> <span id="carModel"></span></a></h5>
+                                                <ul>
+                                                    <li><span id="carPrice"></span></li>
+                                                    <li><span id="carBodyStyle"></span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <!-- <div class="car__item__price">
-                                        <span class="car-option sale">For sale</span>
-                                        <h6>$73,900</h6>
-                                    </div> -->
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4">
-                            <div class="car__item">
-                                <div class="car__item__pic__slider owl-carousel">
-                                    <img src="img/Cars img/Lexus LC.png" alt="">
-                                    <!-- <img src="img/cars/car-3.jpg" alt="">
-                                    <img src="img/cars/car-5.jpg" alt="">
-                                    <img src="img/cars/car-2.jpg" alt=""> -->
-                                </div>
-                                <div class="car__item__text">
-                                    <div class="car__item__text__inner">
-                                        <div class="label-date">2016</div>
-                                        <h5><a href="./car-details-lexus-lc.html">Lexus LC</a></h5>
-                                        <ul>
-                                            <li><span>$</span> 99,800</li>
-                                            <li>Lexus</li>
-                                            <li><span>Coupe</span></li>
-                                        </ul>
+                                
+                                <div class="col-lg-4 col-md-4">
+                                    <div class="car__item">
+                                        <div class="car__item__pic__slider owl-carousel">
+                                            <img src="img/Car Listing/Bugatti Chiron.png" alt="">
+                                        </div>
+                                        <div class="car__item__text">
+                                            <div class="car__item__text__inner">
+                                                <div id="vin_number"></div>
+                                                <h5><a href="./car-details-bugatti-chiron.html" id="carBrandModel"> <span id="carModel"></span></a></h5>
+                                                <ul>
+                                                    <li><span id="carPrice"></span></li>
+                                                    <li><span id="carBodyStyle"></span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <!-- <div class="car__item__price">
-                                        <span class="car-option sale">For sale</span>
-                                        <h6>$73,900</h6>
-                                    </div> -->
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4">
-                            <div class="car__item">
-                                <div class="car__item__pic__slider owl-carousel">
-                                    <img src="img/cars/Land Rover Range Rover.png" alt="">
-                                    <!-- <img src="img/cars/car-3.jpg" alt="">
-                                    <img src="img/cars/car-5.jpg" alt="">
-                                    <img src="img/cars/car-2.jpg" alt=""> -->
-                                </div>
-                                <div class="car__item__text">
-                                    <div class="car__item__text__inner">
-                                        <div class="label-date">2021</div>
-                                        <h5><a href="./car-details-range-rover.html">Land Rover Range Rover</a></h5>
-                                        <ul>
-                                            <li><span>$</span> 52,600</li>
-                                            <li>Land Rover</li>
-                                            <li><span>SUV</span></li>
-                                        </ul>
+        
+                                <div class="col-lg-4 col-md-4">
+                                    <div class="car__item">
+                                        <div class="car__item__pic__slider owl-carousel">
+                                            <img src="img/Car Listing/Lexus LC.png" alt="">
+                                        </div>
+                                        <div class="car__item__text">
+                                            <div class="car__item__text__inner">
+                                                <div id="vin_number"></div>
+                                                <h5><a href="./car-details-lexus-lc.html" id="carBrandModel"> <span id="carModel"></span></a></h5>
+                                                <ul>
+                                                    <li><span id="carPrice"></span></li>
+                                                    <li><span id="carBodyStyle"></span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <!-- <div class="car__item__price">
-                                        <span class="car-option sale">For sale</span>
-                                        <h6>$73,900</h6>
-                                    </div> -->
                                 </div>
-                            </div>
-                        </div>
-                 
-                        <div class="col-lg-4 col-md-4">
-                            <div class="car__item">
-                                <div class="car__item__pic__slider owl-carousel">
-                                    <img src="img/cars/Maserati Ghibli.png" alt="">
-                                    <!-- <img src="img/cars/car-3.jpg" alt="">
-                                    <img src="img/cars/car-5.jpg" alt="">
-                                    <img src="img/cars/car-2.jpg" alt=""> -->
-                                </div>
-                                <div class="car__item__text">
-                                    <div class="car__item__text__inner">
-                                        <div class="label-date">2023</div>
-                                        <h5><a href="./car-details-maserati-ghibli.html">Maserati Ghibli</a></h5>
-                                        <ul>
-                                            <li><span>$</span> 112,650</li>
-                                            <li>Maserati</li>
-                                            <li><span>Sedan</span></li>
-                                        </ul>
+                                
+                                <div class="col-lg-4 col-md-4">
+                                    <div class="car__item">
+                                        <div class="car__item__pic__slider owl-carousel">
+                                            <img src="img/Car Listing/Land Rover Range Rover.png" alt="">
+                                        </div>
+                                        <div class="car__item__text">
+                                            <div class="car__item__text__inner">
+                                                <div id="vin_number"></div>
+                                                <h5><a href="./car-details-range-rover.html" id="carBrandModel"> <span id="carModel"></span></a></h5>
+                                                <ul>
+                                                    <li><span id="carPrice"></span></li>
+                                                    <li><span id="carBodyStyle"></span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <!-- <div class="car__item__price">
-                                        <span class="car-option sale">For sale</span>
-                                        <h6>$73,900</h6>
-                                    </div> -->
                                 </div>
-                            </div>
+                                
+                        
+                                <div class="col-lg-4 col-md-4">
+                                    <div class="car__item">
+                                        <div class="car__item__pic__slider owl-carousel">
+                                            <img src="img/Car Listing/Maserati Ghibli.png" alt="">
+                                        </div>
+                                        <div class="car__item__text">
+                                            <div class="car__item__text__inner">
+                                                <div id="vin_number"></div>
+                                                <h5><a href="./car-details-maserati-ghibli.html" id="carBrandModel"> <span id="carModel"></span></a></h5>
+                                                <ul>
+                                                    <li><span id="carPrice"></span></li>
+                                                    <li><span id="carBodyStyle"></span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>   
+                            </div>    
                         </div>
-                    
-                    <!-- <div class="pagination__option">
-                        <a href="#" class="active">1</a>
-                        <a href="#">2</a>
-                        <a href="#">3</a>
-                        <a href="#"><span class="arrow_carrot-2right"></span></a>
-                    </div> -->
-                </div>
+                    </div>
+                </div>                                    
             </div>
         </div>
+    </div>
     </section>
     <!-- Car Section End -->
 
-     <!-- Footer Section Begin -->
-     <footer class="footer set-bg" data-setbg="img/footer-bg.jpg">
+      <!-- Footer Section Begin -->
+    <footer class="footer set-bg" data-setbg="img/footer-bg.jpg">
         <div class="container">
           <div class="footer__contact">
             <div class="row">
@@ -624,7 +468,7 @@
               <div class="col-lg-6 col-md-6">
                 <div class="footer__contact__option">
                   <div class="option__item">
-                    <i class="fa fa-phone"></i> (+63) 912 345 8888
+                    <i class="fa fa-phone"></i> (555) 555-1234
                   </div>
                   <div class="option__item email">
                     <i class="fa fa-envelope-o"></i> autohub@gmail.com
@@ -640,8 +484,8 @@
                   <a href="#"><img src="img/logo-footer.png" alt="" /></a>
                 </div>
                 <p>
-                  Any questions? Let us know in store at 
-                  92G C. Raymundo Ave, Pasig, Metro Manila or call us on (+63) 912 345 8888
+                  Any questions? Let us know in store at 123 Motor Lane, Gearshiftville, AutoLand 54321
+                   or call us on (555) 555-1234
                 </p>
                 <div class="footer__social">
                   <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
@@ -678,7 +522,7 @@
                     <a href="#"><i class="fa fa-angle-right"></i> Coupe</a>
                   </li>
                   <li>
-                    <a href="#"><i class="fa fa-angle-right"></i> Cabrio</a>
+                    <a href="#"><i class="fa fa-angle-right"></i> Convertible</a>
                   </li>
                   <li>
                     <a href="#"><i class="fa fa-angle-right"></i> SUV</a>
@@ -687,7 +531,7 @@
                     <a href="#"><i class="fa fa-angle-right"></i> Sedan</a>
                   </li>
                   <li>
-                    <a href="#"><i class="fa fa-angle-right"></i> Roadster</a>
+                    <a href="#"><i class="fa fa-angle-right"></i> Hypercar</a>
                   </li>
                 </ul>
               </div>
@@ -697,30 +541,30 @@
                 <h5>Top Brand</h5>
                 <ul>
                   <li>
-                    <a href="#"><i class="fa fa-angle-right"></i> Ford</a>
+                    <a href="#"><i class="fa fa-angle-right"></i> BMW</a>
                   </li>
                   <li>
-                    <a href="#"><i class="fa fa-angle-right"></i> Mitsubishi</a>
+                    <a href="#"><i class="fa fa-angle-right"></i> Mercedes-Benz</a>
                   </li>
                   <li>
-                    <a href="#"><i class="fa fa-angle-right"></i> Suzuki</a>
+                    <a href="#"><i class="fa fa-angle-right"></i> Ferrari</a>
                   </li>
                   <li>
-                    <a href="#"><i class="fa fa-angle-right"></i> Nissan</a>
+                    <a href="#"><i class="fa fa-angle-right"></i> Volkswagen</a>
                   </li>
                 </ul>
                 <ul>
                   <li>
-                    <a href="#"><i class="fa fa-angle-right"></i> Honda</a>
+                    <a href="#"><i class="fa fa-angle-right"></i> Bugatti</a>
                   </li>
                   <li>
-                    <a href="#"><i class="fa fa-angle-right"></i> Kia</a>
+                    <a href="#"><i class="fa fa-angle-right"></i> Audi</a>
                   </li>
                   <li>
-                    <a href="#"><i class="fa fa-angle-right"></i> Chevrolet</a>
+                    <a href="#"><i class="fa fa-angle-right"></i> Land Rover</a>
                   </li>
                   <li>
-                    <a href="#"><i class="fa fa-angle-right"></i> Hyundai</a>
+                    <a href="#"><i class="fa fa-angle-right"></i> Lexus</a>
                   </li>
                 </ul>
               </div>
@@ -729,42 +573,38 @@
           <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
           <div class="footer__copyright__text">
             <p>
-              Copyright &copy;
-              <script>
-                document.write(new Date().getFullYear());
-              </script>
+              Copyright © 2024
               All rights reserved | This template is made with
               <i class="fa fa-heart" aria-hidden="true"></i> by
-              <a href="https://colorlib.com" target="_blank">Colorlib</a>
+              <a href="https://colorlib.com" target="_blank">Autohub</a>
             </p>
           </div>
           <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
         </div>
       </footer>
       <!-- Footer Section End -->
-      
-
-    <!-- Search Begin -->
-    <div class="search-model">
+  
+      <!-- Search Begin -->
+      <div class="search-model">
         <div class="h-100 d-flex align-items-center justify-content-center">
-            <div class="search-close-switch">+</div>
-            <form class="search-model-form">
-                <input type="text" id="search-input" placeholder="Search here.....">
-            </form>
+          <div class="search-close-switch">+</div>
+          <form class="search-model-form">
+            <input type="text" id="search-input" placeholder="Search here....." />
+          </form>
         </div>
-    </div>
-    <!-- Search End -->
-
-    <!-- Js Plugins -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.nice-select.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/mixitup.min.js"></script>
-    <script src="js/jquery.slicknav.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/main.js"></script>
-</body>
-
-</html>
+      </div>
+      <!-- Search End -->
+  
+      <!-- Js Plugins -->
+      <script src="js/jquery-3.3.1.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/jquery.nice-select.min.js"></script>
+      <script src="js/jquery-ui.min.js"></script>
+      <script src="js/jquery.magnific-popup.min.js"></script>
+      <script src="js/mixitup.min.js"></script>
+      <script src="js/jquery.slicknav.js"></script>
+      <script src="js/owl.carousel.min.js"></script>
+      <script src="js/main.js"></script>
+    </body>
+  </html>
+  
